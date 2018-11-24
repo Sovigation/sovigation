@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<script language="javascript">
+<html>
+  <head>
+    <script language="javascript">
       function writeCheck() {
           var form = document.writeform;
 
@@ -21,23 +23,19 @@
           }
           form.submit();
       }
-  </script>
-
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>게시판 글쓰기</title>
   </head>
   <body>
-    <table width=700 border=1 cellspacing=0 cellpadding=5>
-        <form name=writeform method=post action="/dowrite/">
+  <form name=writeform method=post action="/dowrite/">
+      <table width=700 border=1 cellspacing=0 cellpadding=5>
             <tr><td><b>이름</b></td><td><input type=text name=name size=50  maxlength=50></td></tr>
             <tr><td><b>이메일</b></td><td><input type=text name=email size=50  maxlength=50></td></tr>
             <tr><td><b>제목</b></td><td><input type=text name=subject size=50  maxlength=50></td></tr>
             <tr><td><b>내용</b></td><td><textarea name=memo cols=50 rows=10></textarea></td></tr>
-        </form>
-    </table>
-
+        </table>
+    </form>
     <table width=700 border=1 cellspacing=0 cellpadding=0>
         <tr>
             <td>

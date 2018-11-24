@@ -17,9 +17,7 @@
           <td><p align=center>사용좌석</p></td>
           <td><p align=center>잔여좌석</p></td>
       </tr>
-
       {% if boardList %}
-          <ul>
               {% for boardRow in boardList %}
               <tr>
               <td><p align=center>{{ boardRow.libname }}</p></td>
@@ -30,9 +28,12 @@
               <td><p align=center>{{ boardRow.rest }}</p></td>
               </tr>
               {% endfor %}
-          </ul>
       {% else %}
-          <p>No Data.</p>
+      <tr>
+          <td rowspan='6'>
+            <p>No Data.</p>
+          </td>
+      </tr>
       {% endif %}
   </table>
 </body>

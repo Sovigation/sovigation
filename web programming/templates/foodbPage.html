@@ -15,9 +15,7 @@
           <td><p align=center>일품</p></td>
           <td><p align=center>특식</p></td>
       </tr>
-
       {% if boardList %}
-          <ul>
               {% for boardRow in boardList %}
               <tr>
               <td><p align=center>{{ boardRow.week }}</p></td>
@@ -26,9 +24,12 @@
               <td><p align=center>{{ boardRow.special }}</p></td>
               </tr>
               {% endfor %}
-          </ul>
       {% else %}
-          <p>No Data.</p>
+         <tr>
+            <td colspan='4'>
+               <p>No Data.</p>
+            </td>
+         </tr>
       {% endif %}
   </table>
 </body>

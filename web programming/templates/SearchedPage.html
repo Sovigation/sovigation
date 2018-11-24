@@ -21,30 +21,32 @@
           <td width=100><p align=center>조회수</p></td>
       </tr>
       {% if boardList %}
-          <ul>
               {% for boardRow in boardList %}
               <tr>
               <td width=50><p align=center>{{ boardRow.id }}</p></td>
               <td width=100><p align=center>{{ boardRow.name }}</p></td>
               <td width=320>
                   <p align=center>
-                      <a href="/viewWork?memo_id={{ boardRow.id }}&current_page={{ pageForView }}&searchStr={{searchStr}}" title="{{ boardRow.memo}}">{{ boardRow.subject }}
+                      <a href="/viewWork?memo_id={{ boardRow.id }}&current_page={{ pageForView }}&searchStr={{searchStr}}" title="{{ boardRow.memo}}">{{ boardRow.subject }}</a>
                   </p>
               </td>
               <td width=100><p align=center>{{ boardRow.created_date }}</p></td>
               <td width=100><p align=center>{{ boardRow.hits }}</p></td>
               </tr>
               {% endfor %}
-          </ul>
       {% else %}
-          <p>No Data.</p>
+         <tr>
+            <td colspan='5'>
+               <p>No Data.</p>
+            </td>
+         </tr>
       {% endif %}
   </table>
   <table cellspacing=1 width=700 border=1 >
       <tr>
           <td>
             {% for page in totalPageList %}
-              <a href="/listSearchedSpecificPageWork?searchStr={{searchStr}}&pageForView={{page}}" >
+              <a href="/searchedPage?searchStr={{searchStr}}&pageForView={{page}}" >
               [
               {% ifequal page pageForView %}
                   <b>
@@ -55,13 +57,14 @@
                   </b>
               {% endifequal %}
               ]
+              </a>
             {% endfor %}
           </td>
       </tr>
   </table>
   <table width=700>
       <tr>
-          <td><input type=button value="전체 목록으로 돌아가기"  OnClick="window.location='/'">
+          <td><input type=button value="전체 목록으로 돌아가기"  OnClick="window.location='/board'">
       </tr>
   </table>
 </body>
