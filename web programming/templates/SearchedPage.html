@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table cellspacing=1 width=700 border=0>
+      <tr>
+          <td>총 게시물수: {{ totalCnt }}</td>
+          <td><p align=right> 페이지:{{ pageForView }}
+          </td>
+      </tr>
+  </table>
+  <table cellspacing=1 width=700 border=1>
+      <tr>
+          <td width=50><p align=center>번호</p></td>
+          <td width=100><p align=center>이름</p></td>
+          <td width=320><p align=center>제목</p></td>
+          <td width=100><p align=center>등록일</p></td>
+          <td width=100><p align=center>조회수</p></td>
+      </tr>
+      {% if boardList %}
+          <ul>
+              {% for boardRow in boardList %}
+              <tr>
+              <td width=50><p align=center>{{ boardRow.id }}</p></td>
+              <td width=100><p align=center>{{ boardRow.name }}</p></td>
+              <td width=320>
+                  <p align=center>
+                      <a href="/viewWork?memo_id={{ boardRow.id }}&current_page={{ pageForView }}&searchStr={{searchStr}}" title="{{ boardRow.memo}}">{{ boardRow.subject }}
+                  </p>
+              </td>
+              <td width=100><p align=center>{{ boardRow.created_date }}</p></td>
+              <td width=100><p align=center>{{ boardRow.hits }}</p></td>
+              </tr>
+              {% endfor %}
+          </ul>
+      {% else %}
+          <p>No Data.</p>
+      {% endif %}
+  </table>
+  <table cellspacing=1 width=700 border=1 >
+      <tr>
+          <td>
+            {% for page in totalPageList %}
+              <a href="/listSearchedSpecificPageWork?searchStr={{searchStr}}&pageForView={{page}}" >
+              [
+              {% ifequal page pageForView %}
+                  <b>
+              {% endifequal %}
+              {{page}}
+
+              {% ifequal page pageForView  %}
+                  </b>
+              {% endifequal %}
+              ]
+            {% endfor %}
+          </td>
+      </tr>
+  </table>
+  <table width=700>
+      <tr>
+          <td><input type=button value="전체 목록으로 돌아가기"  OnClick="window.location='/'">
+      </tr>
+  </table>
+</body>
+</html>
