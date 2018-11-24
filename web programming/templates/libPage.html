@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>test</title>
+</head> 
+<body>
+{% comment %}
+  boardList: <strong>{{ boardList|length }}</strong>
+  {% endcomment %}
+  <table cellspacing=1 width=700 border=1>
+      <tr>
+          <td><p align=center>도서관</p></td>
+          <td><p align=center>층</p></td>
+          <td><p align=center>실명</p></td>
+          <td><p align=center>전체좌석</p></td>
+          <td><p align=center>사용좌석</p></td>
+          <td><p align=center>잔여좌석</p></td>
+      </tr>
+
+      {% if boardList %}
+          <ul>
+              {% for boardRow in boardList %}
+              <tr>
+              <td><p align=center>{{ boardRow.libname }}</p></td>
+              <td><p align=center>{{ boardRow.floor }}</p></td>
+              <td><p align=center>{{ boardRow.room }}</p></td>
+              <td><p align=center>{{ boardRow.whole }}</p></td>
+              <td><p align=center>{{ boardRow.used }}</p></td>
+              <td><p align=center>{{ boardRow.rest }}</p></td>
+              </tr>
+              {% endfor %}
+          </ul>
+      {% else %}
+          <p>No Data.</p>
+      {% endif %}
+  </table>
+</body>
+</html>
