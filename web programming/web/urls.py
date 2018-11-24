@@ -25,4 +25,15 @@ urlpatterns = [
     url(r'^fooda/$', views.fooda),
     url(r'^foodb/$', views.foodb),
     url(r'^foodc/$', views.foodc),
+
+    url(r'^board/$', views.board),#home
+    url(r'^write/$', views.write),#show_write_form
+    url(r'^dowrite/$', views.dowrite),#DoWriteBoard
+    url(r'^listPage/$', views.listpage),#listSpecificPageWork
+    url(r'^searchedPage/$', views.searchedpage),#listSearchedSpecificPageWork
+    url(r'^viewWork/$', views.viewwork),
+    url(r'^listUpdate/$', views.listupdate),
+    url(r'^updateBoard/$', views.updateboard),
+    url(r'^delete/$', views.delete),
+    url(r'^searchWithSubject/$', views.searchWithSubject),
 ]
