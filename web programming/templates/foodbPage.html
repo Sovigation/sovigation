@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>test</title>
+</head> 
+<body>
+{% comment %}
+  boardList: <strong>{{ boardList|length }}</strong>
+ {% endcomment %}
+  <table cellspacing=1 width=700 border=1>
+      <tr>
+          <td><p align=center></p></td>
+          <td><p align=center>교직원</p></td>
+          <td><p align=center>일품</p></td>
+          <td><p align=center>특식</p></td>
+      </tr>
+
+      {% if boardList %}
+          <ul>
+              {% for boardRow in boardList %}
+              <tr>
+              <td><p align=center>{{ boardRow.week }}</p></td>
+              <td><p align=center>{{ boardRow.prof }}</p></td>
+              <td><p align=center>{{ boardRow.first }}</p></td>
+              <td><p align=center>{{ boardRow.special }}</p></td>
+              </tr>
+              {% endfor %}
+          </ul>
+      {% else %}
+          <p>No Data.</p>
+      {% endif %}
+  </table>
+</body>
+</html>

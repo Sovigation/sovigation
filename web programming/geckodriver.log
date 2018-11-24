@@ -1,0 +1,55 @@
+1538921594567	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\asdfg\\AppData\\Local\\Temp\\rust_mozprofile.cG1gQgrQqYt9"
+1538921600609	Marionette	INFO	Listening on port 52383
+1538921600729	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538921600778	Marionette	DEBUG	[6442450945] Frame script loaded
+1538921600786	Marionette	DEBUG	[6442450945] Frame script registered
+1538921600816	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1538921601272	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1538921601527	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://dlibadm.gachon.ac.kr/GACHON_CENTRAL_BOOKING/webbooking/statusList.jsp;jsessionid=551C36DA908D0B356F7793D0A73660F6
+JavaScript error: http://dlibadm.gachon.ac.kr/GACHON_CENTRAL_BOOKING/common/scripts/frameResize.js;jsessionid=79ECBC90A3C79A8B9956B0D49EDE69A4, line 27: TypeError: document.getElementById(...) is null
+1538921601574	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://dlibadm.gachon.ac.kr/GACHON_CENTRAL_BOOKING/webbooking/statusList.jsp;jsessionid=551C36DA908D0B356F7793D0A73660F6
+1538921601658	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://dlibadm.gachon.ac.kr/GACHON_CENTRAL_BOOKING/webbooking/statusList.jsp;jsessionid=551C36DA908D0B356F7793D0A73660F6
+1538921601700	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://dlibadm.gachon.ac.kr/GACHON_CENTRAL_BOOKING/webbooking/statusList.jsp;jsessionid=551C36DA908D0B356F7793D0A73660F6
+1538921601829	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://www.gachon.ac.kr/etc/food.jsp?gubun=A
+1538921602477	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://www.gachon.ac.kr/etc/food.jsp?gubun=A
+1538921602532	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://www.gachon.ac.kr/etc/food.jsp?gubun=A
+1538921602581	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://www.gachon.ac.kr/etc/food.jsp?gubun=A
+1538921602662	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://www.gachon.ac.kr/etc/food.jsp?gubun=B
+1538921602834	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://www.gachon.ac.kr/etc/food.jsp?gubun=B
+1538921602873	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://www.gachon.ac.kr/etc/food.jsp?gubun=B
+1538921602902	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://www.gachon.ac.kr/etc/food.jsp?gubun=B
+1538921602992	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://www.gachon.ac.kr/etc/food.jsp?gubun=C
+1538921603157	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://www.gachon.ac.kr/etc/food.jsp?gubun=C
+1538921603203	Marionette	INFO	Stopped listening on port 52383
+JavaScript error: jar:file:///C:/Program%20Files/Mozilla%20Firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 589: TypeError: this.tablesData[table] is undefined
+[Parent 16948, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 16948, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 16948, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 30324, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child[GPU 2866: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Chil[GPU 16468, 
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+end/recv
+
+or: Channel error: cannot send/recv
+
+:28
+observe@AsyncShutdown.jsm:524:17
+GeckoDriver.prototype.quit@driver.js:3319:3
+despatch@server.js:297:20
+execute@server.js:271:11
+onPacket/<@server.js:246:15
+onPacket@server.js:245:8
+_onJSONObjectReady/<@transport.js:500:9
+[Parent 19596, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15500, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15500[Parent 19596, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19824, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child [GPU 290
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+mmon/ipc_channel_win.cc, line 346
+[Child 10660, C[GPU 4448, Ch
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
