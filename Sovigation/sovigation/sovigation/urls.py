@@ -15,9 +15,19 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from service import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include('service.urls')),
-
+    url(r'^$', views.login),
+    url(r'^assignment/$', views.assignment),
+    url(r'^board$', views.board),
+    url(r'^contact$', views.contact),
+    url(r'^food$', views.food),
+    url(r'^grade$', views.grade),
+    url(r'^index$', views.index),
+    url(r'^lib$', views.lib),
+    url(r'^about$', views.about),
+    url(r'^myservice$', views.myservice),
+    url(r'^todo$', views.todo),
 ]
