@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script language="javascript">
+      function boardlist()
+      {
+          var s = "{{searchStr}}";
+
+          if(s=="None")
+              location.href = '/listPage?current_page={{current_page}}';
+          else
+              location.href = '/searchedPage?pageForView={{current_page}}&searchStr={{searchStr}}';
+      }
+
+      function boardmodify()
+      {
+          location.href='/listUpdate?memo_id={{memo_id}}&current_page={{current_page}}&searchStr={{searchStr}}';
+      }
+
+      function boarddelete()
+      {
+          location.href='/delete?memo_id={{memo_id}}&current_page={{current_page}}';
+      }
+    </script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table cellspacing = 0 cellpadding = 5 border = 1 width=500>
+      <tr><td><b>조회수</b></td><td> {{ boardData.hits }} </td></tr>
+      <tr><td><b>이름 </b></td><td> {{ boardData.name }} </td></tr>
+      <tr><td><b>이메일 </b></td><td> {{ boardData.mail }} </td></tr>
+      <tr><td><b>제목 </b></td><td> {{ boardData.subject }} </td></tr>
+      <tr><td><b>내용 </b></td><td width=350> {{ boardData.memo }} </td></tr>
+  </table>
+  <table  cellspacing = 0 cellpadding = 0 border = 0 width=500>
+      <tr><td>
+          <input type=button value="수정" OnClick="javascript:boardmodify()">
+          <input type=button value="목록" OnClick="javascript:boardlist()">
+          <input type=button value="삭제" OnClick="javascript:boarddelete()">
+      </td></tr>
+  </table>
+</body>
+</html>
