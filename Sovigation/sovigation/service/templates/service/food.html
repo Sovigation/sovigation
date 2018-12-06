@@ -62,7 +62,11 @@ table.type10 .even {
 }
 </style>
 </head>
-
+{% comment %}
+  	boardListA: <strong>{{ boardListA|length }}</strong>
+	boardListB: <strong>{{ boardListB|length }}</strong>
+	boardListC: <strong>{{ boardListC|length }}</strong>
+{% endcomment %}
 <body id="page-top">
 
 	<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
@@ -155,33 +159,33 @@ table.type10 .even {
 								<tbody>
 									<tr>
 										<th scope="row">월</th>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
+										<td>{{ boardListC.5.prof }}</td>
+										<td>{{ boardListC.5.first }}</td>
+										<td>{{ boardListC.5.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row" class="even">화</th>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
+										<td class="even">{{ boardListC.4.prof }}</td>
+										<td class="even">{{ boardListC.4.first }}</td>
+										<td class="even">{{ boardListC.4.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row">수</th>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
+										<td>{{ boardListC.3.prof }}</td>
+										<td>{{ boardListC.3.first }}</td>
+										<td>{{ boardListC.3.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row" class="even">목</th>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
+										<td class="even">{{ boardListC.2.prof }}</td>
+										<td class="even">{{ boardListC.2.first }}</td>
+										<td class="even">{{ boardListC.2.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row">금</th>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
+										<td>{{ boardListC.1.prof }}</td>
+										<td>{{ boardListC.1.first }}</td>
+										<td>{{ boardListC.1.special }}</td>
 									</tr>
 								</tbody>
 							</table>
@@ -212,33 +216,33 @@ table.type10 .even {
 								<tbody>
 									<tr>
 										<th scope="row">월</th>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
+										<td>{{ boardListB.5.prof }}</td>
+										<td>{{ boardListB.5.first }}</td>
+										<td>{{ boardListB.5.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row" class="even">화</th>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
+										<td class="even">{{ boardListB.4.prof }}</td>
+										<td class="even">{{ boardListB.4.first }}</td>
+										<td class="even">{{ boardListB.4.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row">수</th>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
+										<td>{{ boardListB.3.prof }}</td>
+										<td>{{ boardListB.3.first }}</td>
+										<td>{{ boardListB.3.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row" class="even">목</th>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
+										<td class="even">{{ boardListB.2.prof }}</td>
+										<td class="even">{{ boardListB.2.first }}</td>
+										<td class="even">{{ boardListB.2.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row">금</th>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
+										<td>{{ boardListB.1.prof }}</td>
+										<td>{{ boardListB.1.first }}</td>
+										<td>{{ boardListB.1.special }}</td>
 									</tr>
 								</tbody>
 							</table>
@@ -269,33 +273,33 @@ table.type10 .even {
 								<tbody>
 									<tr>
 										<th scope="row">월</th>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
+										<td>{{ boardListA.5.prof }}</td>
+										<td>{{ boardListA.5.first }}</td>
+										<td>{{ boardListA.5.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row" class="even">화</th>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
+										<td class="even">{{ boardListA.4.prof }}</td>
+										<td class="even">{{ boardListA.4.first }}</td>
+										<td class="even">{{ boardListA.4.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row">수</th>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
+										<td>{{ boardListA.3.prof }}</td>
+										<td>{{ boardListA.3.first }}</td>
+										<td>{{ boardListA.3.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row" class="even">목</th>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
-										<td class="even">내용이 들어갑니다.</td>
+										<td class="even">{{ boardListA.2.prof }}</td>
+										<td class="even">{{ boardListA.2.first }}</td>
+										<td class="even">{{ boardListA.2.special }}</td>
 									</tr>
 									<tr>
 										<th scope="row">금</th>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
-										<td>내용이 들어갑니다.</td>
+										<td>{{ boardListA.1.prof }}</td>
+										<td>{{ boardListA.1.first }}</td>
+										<td>{{ boardListA.1.special }}</td>
 									</tr>
 								</tbody>
 							</table>
