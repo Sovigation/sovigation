@@ -13,7 +13,8 @@ urlpatterns = [
     url(r'^food/$', views.food),
     url(r'^grade/$', views.grade),
     url(r'^lib/$', views.lib),
-    url(r'^login/$', views.sign_in),
+    url(r'^login/$', views.login),
     url(r'^myService/$', views.myService),
     url(r'^to_do/$', views.to_do)
+    url(r'^dologin/$', views.dologin),
 ]
