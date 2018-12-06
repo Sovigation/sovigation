@@ -9,9 +9,28 @@ from .models import FoodB
 from .models import FoodC
 from .models import UserInfo
 from django.core.exceptions import ObjectDoesNotExist
+from django.views.decorators.csrf import csrf_exempt
 
 rowsPerPage = 5
 
+@csrf_exempt
+def dologin(request):
+    ID = request.POST['username']
+    password = request.POST['password']
+    lr = LoginRequest(
+        name=ID,
+        password=password,
+    )
+    lr.save()
+
+    time.sleep(10)
+    result = LoginResult.objects.get(name=ID)
+    if result.result:
+        url = '/myservice'
+    else:
+        url = '/login'
+    result.delete()
+    return HttpResponseRedirect(url)
 
 def index(request):
     return render(request, 'service/index.html')
@@ -30,7 +49,10 @@ def board(request):
 
 
 def food(request):
-    return render(request, 'service/food.html')
+    boardListA = FoodA.objects.order_by('-id')[0:6]
+    boardListB = FoodB.objects.order_by('-id')[0:6]
+    boardListC = FoodC.objects.order_by('-id')[0:6]
+    return render_to_response('service/food.html', {'boardListA': boardListA, 'boardListB': boardListB, 'boardListC': boardListC})
 
 
 def grade(request):
@@ -38,7 +60,8 @@ def grade(request):
 
 
 def lib(request):
-    return render(request, 'service/lib.html')
+    boardList = Lib.objects.order_by('-id')[0:5]
+    return render_to_response('service/lib.html', {'boardList': boardList})
 
 
 def login(request):
@@ -51,46 +74,6 @@ def myService(request):
 
 def to_do(request):
     return render(request, 'service/to_do.html')
-
-
-def lib(request):
-    boardList = Lib.objects.order_by('-id')[0:5]
-    return render_to_response('lib.html', {'boardList': boardList})
-
-
-def fooda(request):
-    boardList = FoodA.objects.order_by('-id')[0:6]
-    return render_to_response('foodaPage.html', {'boardList': boardList})
-
-
-def foodb(request):
-    boardList = FoodB.objects.order_by('-id')[0:6]
-    return render_to_response('foodbPage.html', {'boardList': boardList})
-
-
-def foodc(request):
-    boardList = FoodC.objects.order_by('-id')[0:6]
-    return render_to_response('foodcPage.html', {'boardList': boardList})
-
-
-def sign_in(request):
-    if request.method == "POST":
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(username, password)
-
-        if user is None:
-            insert_new_user(username, password)
-            return myService(request)
-        else:
-            return myService(request)
-        # if user is not None:
-        #     login(request, user)
-        #     return redirect('index')
-        # else:
-        #     return HttpResponse('로그인 실패. 다시 시도 해보세요.')
-    else:
-        return login(request)
 
 
 def authenticate(username, password):
