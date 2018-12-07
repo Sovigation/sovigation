@@ -46,4 +46,15 @@ class Board(models.Model):
     mail = models.CharField(max_length=50, blank=True)
     memo = models.CharField(max_length=200, blank=True)
     hits = models.IntegerField(null=True, blank=True)
+    
+    
+class LoginRequest(models.Model):
+    name = models.CharField(max_length=50, blank=True)
+    password = models.CharField(max_length=50, blank=True)
+
+
+class LoginResult(models.Model):
+    name = models.CharField(max_length=50, blank=True)
+    result = models.BooleanField()
+# Create your models here.
 # Create your models here.
