@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
+
+
 # 로그인
 class UserInfo(models.Model):
     username = models.CharField(max_length=20)
@@ -49,6 +51,7 @@ class Board(models.Model):
     memo = models.CharField(max_length=200, blank=True)
     hits = models.IntegerField(null=True, blank=True)
 
+
 class LoginRequest(models.Model):
     name = models.CharField(max_length=50, blank=True)
     password = models.CharField(max_length=50, blank=True)
@@ -57,5 +60,14 @@ class LoginRequest(models.Model):
 class LoginResult(models.Model):
     name = models.CharField(max_length=50, blank=True)
     result = models.BooleanField()
+
+
+class Grade(models.Model):
+    user = models.ForeignKey(UserInfo, on_delete=models.CASCADE)
+    grade = models.CharField(max_length=2)
+    credit = models.IntegerField(null=False, default=2)
+    semester = models.CharField(max_length=6)
+    major = models.BooleanField(null=False, default=False)
+    subject = models.CharField(null=True, max_length=20)
 
 # Create your models here.

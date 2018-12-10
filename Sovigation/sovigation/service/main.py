@@ -4,14 +4,14 @@ import time
 import bs4
 from selenium import webdriver
 from selenium.common.exceptions import UnexpectedAlertPresentException
-import sqlite3
+import pymysql
 import threading
 
 week = ['월', '화', '수', '목', '금', '토']
 
 
 def parser(url, class_name):
-    driver = webdriver.Chrome('../driver/chromedriver')
+    driver = webdriver.Chrome('C:\\Users\GENIE\PycharmProjects\Sovigation\driver\chromedriver')
     driver.get(url)
     source = driver.page_source
     bs = bs4.BeautifulSoup(source, 'lxml')
@@ -21,7 +21,7 @@ def parser(url, class_name):
 
 
 def login(ID, password):
-    driver = webdriver.Chrome('../driver/chromedriver')
+    driver = webdriver.Chrome('C:\\Users\GENIE\PycharmProjects\Sovigation\driver\chromedriver')
     # driver.implicitly_wait(3)
     driver.get("https://cyber.gachon.ac.kr/login.php")
     try:
@@ -205,7 +205,7 @@ def vis():
 
 
 def sqlsave():
-    conn = sqlite3.connect('web.db')
+    conn = pymysql.connect(host='localhost', user='root', password='12345', charset='utf8', db='web')
     try:
 
         Library = lib()
@@ -236,12 +236,11 @@ def sqlsave():
 
         Vision = vis()
         for i in range(0, 6):
-            with conn:
-                cursor = conn.cursor()
-                sql = 'update service_foodc set prof= %s,first=%s,special=%s,updated_at=%s,week=%s where id=%s'
-                cursor.execute(sql,
-                               (Vision[i][1], Vision[i][2], Vision[i][3], Vision[i][4], Vision[i][5], Vision[i][0]))
-            conn.commit()
+            cursor = conn.cursor()
+            sql = 'update service_foodc set prof= %s,first=%s,special=%s,updated_at=%s,week=%s where id=%s'
+            cursor.execute(sql,
+                           (Vision[i][1], Vision[i][2], Vision[i][3], Vision[i][4], Vision[i][5], Vision[i][0]))
+        conn.commit()
     finally:
         conn.close()
 
@@ -249,7 +248,7 @@ def sqlsave():
 class crwaling(threading.Thread):
     def run(self):
         while True:
-            conn = sqlite3.connect('web.db')
+            conn = pymysql.connect(host='localhost', user='root', password='12345', charset='utf8', db='web')
             try:
                 with conn:
                     cursor = conn.cursor()
@@ -283,4 +282,5 @@ class crwaling(threading.Thread):
 
 
 pr1 = crwaling()
+sqlsave()
 pr1.start()

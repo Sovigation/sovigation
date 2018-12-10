@@ -168,9 +168,9 @@ boardList: <strong>{{ boardList|length }}</strong>
                             {% for boardRow in boardList %}
                             <tr>
                                 <th scope="row"></th>
-                                <td>{{ boardRow.libname }}</td>
                                 <td>{{ boardRow.floor }}</td>
                                 <td>{{ boardRow.room }}</td>
+                                <td>{{ boardRow.whole }}</td>
                                 <td>{{ boardRow.used }}</td>
                                 <td>{{ boardRow.rest }}</td>
                             </tr>

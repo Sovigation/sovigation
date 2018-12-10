@@ -17,4 +17,5 @@ urlpatterns = [
     url(r'^myService/$', views.myService),
     url(r'^to_do/$', views.to_do),
     url(r'^dologin/$', views.dologin),
+    url(r'^insert/$', views.insert_grade),
 ]
