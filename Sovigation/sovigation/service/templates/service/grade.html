@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
+<!--data : [ 0.0, 1.5, 2.0, 2.5, 3.18, 4.23, 4.21, 1.32 ],-->
 <head>
 
     <meta charset="utf-8">
@@ -19,81 +19,82 @@
     <link href="../static/vendor2/fontawesome-free/css/all.min.css" rel="stylesheet"
           type="text/css">
 
-    <!-- Page level plugin CSS-->
+    <!-- Page level plugin CSS
     <link href="../static/vendor2/datatables/dataTables.bootstrap4.css"
-          rel="stylesheet">
+          rel="stylesheet">-->
 
     <!-- Custom styles for this template-->
     <link href="../static/css/sb-admin.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+    <style>
+    #container {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    }
+
+    </style>
 
 </head>
 <!-- 제이쿼리 사용 -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-	function plus() {
-	
-			alert("1")
-			var html="<div><input type='text'/> <input type='text'/> 
-			+"<select><option value="">전공</option><option value="">교양</option></select>"
-			+"<input type='text' /> <select><option>1학년 1학기</option>"
-			+"<option value='1-2'>1학년 2학기</option>"
-			+"<option>2학년 1학기</option>"
-			+"<option>2학년 2학기</option>"
-			+"<option>3학년 1학기</option>"
-			+"<option>3학년 2학기</option>"
-			+"<option>4학년 1학기</option>"
-			+"<option>4학년 2학기</option>"
-			+"<option>여름계절학기</option>"
-			+"<option>겨울계절학기</option>"
-			+"</select> &nbsp; <span class='fa-stack fa-0.5x'>
-			+"onclick='plus();''> <i class='fa fa-circle fa-stack-2x'></i>"
-			+"<i class='fa fa-plus fa-stack-1x fa-inverse'></i></span>"			
-	
-	}
-
-
-</script>
-<script>
-var gpa_ctx = document.getElement("GPAChart");
-var gpa_chart = new Chart(gpa_ctx,{
-	type: 'doughnut',
-	data:{
-		datasets:[{
-			data:[10,20,30]
-		}],
-		labels: [
-			'Red',
-			''
-		]
-	};
+    $(document).ready(function() {
+  $('#dataTable').DataTable();
 });
 
-
 </script>
-<!-- 파이그래프 스크립트 부분 -->
+
 <script>
-window.onload = function () {
+Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+Chart.defaults.global.defaultFontColor = '#292b2c';
 
-var options = {
-	animationEnabled: true,
-	title: {
-		text: "GPA"
+// Bar Chart Example
+var ctx = document.getElementById("myBarChart");
+var myLineChart = new Chart(ctx, {
+	type : 'bar',
+	data : {
+		labels : [ "1학년 1학기", "1학년 2학기", "2학년 1학기", "2학년 2학기", "3학년 1학기",
+				"3학년 2학기", "4학년 1학기", "4학년 2학기" ],
+		datasets : [ {
+			label : "Revenue",
+			backgroundColor : "rgba(92,180,193,1)",
+			borderColor : "rgba(2,117,216,1)",
+			data : semester,
+		} ],
 	},
-	data: [{
-		type: "doughnut",
-		innerRadius: "96%",
-		showInLegend: true,
-		legendText: "{label}",
-		max:4.5,
-		dataPoints: [
-			{ label: "전체 학기 학점", y: 4.25 }
-		]
-	}]
-};
-$("#GPAChart").CanvasJSChart(options);
-
-}
-
+	options : {
+		scales : {
+			xAxes : [ {
+				time : {
+					unit : 'semester'
+				},
+				gridLines : {
+					display : false
+				},
+				ticks : {
+					maxTicksLimit : 6
+				}
+			} ],
+			yAxes : [ {
+				ticks : {
+					min : 0.0,
+					max : 4.5,
+					maxTicksLimit : 0.5
+				},
+				gridLines : {
+					display : true
+				}
+			} ],
+		},
+		legend : {
+			display : false
+		}
+	}
+});
 
 </script>
 <body id="page-top">
@@ -142,8 +143,8 @@ $("#GPAChart").CanvasJSChart(options);
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                 <h6 class="dropdown-header">개인 서비스 목록:</h6>
                 <a class="dropdown-item" href="/grade/">학점 관리하기</a> <a
-                    class="dropdown-item" href="/assignment/">과제물 관리하기</a> <a
-                    class="dropdown-item" href="/to_do/">나의 To Do List</a></div>
+                    class="dropdown-item" href="/assignment/">과제물 관리하기</a>
+            </div>
         </li>
 
         <!-- 커뮤니티서비스 대시보드 묘묘 -->
@@ -157,7 +158,7 @@ $("#GPAChart").CanvasJSChart(options);
                 <h6 class="dropdown-header">커뮤니티 서비스 목록:</h6>
                 <a class="dropdown-item" href="/food/">오늘의 식단 보러가기</a> <a
                     class="dropdown-item" href="/lib/">도서관 자리 보러가기</a> <a
-                    class="dropdown-item" href="/board/">소식 게시판</a>
+                    class="dropdown-item" href="/board1/">소식 게시판</a>
             </div>
         </li>
     </ul>
@@ -178,7 +179,53 @@ $("#GPAChart").CanvasJSChart(options);
                         <i class="fas fa-chart-bar"></i> 나의 학점
                     </div>
                     <div class="card-body">
-                        <canvas id="myBarChart" width="100%" height="50"></canvas>
+                        <!-- <canvas id="myBarChart" width="100%" height="50"></canvas>-->
+                        <canvas id="myChart" width="100%" height="50"></canvas>
+                        <script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var semester_grade = {{semester}}
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data : {
+		labels : [ "1학년 1학기", "1학년 2학기", "2학년 1학기", "2학년 2학기", "3학년 1학기",
+				"3학년 2학기", "4학년 1학기", "4학년 2학기" ],
+		datasets : [ {
+			label : "Revenue",
+			backgroundColor : "rgba(92,180,193,1)",
+			borderColor : "rgba(2,117,216,1)",
+			data : semester_grade,
+		} ],
+	},options : {
+		scales : {
+			xAxes : [ {
+				time : {
+					unit : 'semester'
+				},
+				gridLines : {
+					display : false
+				},
+				ticks : {
+					maxTicksLimit : 6
+				}
+			} ],
+			yAxes : [ {
+				ticks : {
+					min : 0.0,
+					max : 4.5,
+					maxTicksLimit : 0.5
+				},
+				gridLines : {
+					display : true
+				}
+			} ],
+		},
+		legend : {
+			display : false
+		}
+	}
+});
+
+                        </script>
                     </div>
                     <div class="card-footer small text-muted"></div>
                 </div>
@@ -189,18 +236,19 @@ $("#GPAChart").CanvasJSChart(options);
                     <div class="card-header">
                         <i class="fas fa-chart-bar"></i> 나의 학점 입력하기
                     </div>
-                    <form method="get" action="/insert/" class="form-inline"> {% csrf_token %}
+                    <form method="post" action="/insert/" class="form-inline"> {% csrf_token %}
                         <div class="card-body">
-                        <!--<div>{{form.as_p}}</div>-->
+                            <!--<div>{{form.as_p}}</div>-->
                             <div id="creditItem">
-                                <input id="_subject" class="form-control" type="text" placeholder="과목명"/>
-                                <input id="_credit"
-                                        class="form-control" type="text" placeholder="학점"/>
-                                <select id="_major"
+                                <input id="_subject" name="_subject" class="form-control" type="text"
+                                       placeholder="과목명"/>
+                                <input id="_credit" name="_credit"
+                                       class="form-control" type="text" placeholder="학점"/>
+                                <select id="_major" name="_major"
                                         class="form-control">
                                     <option value="true">전공</option>
                                     <option value="false">교양</option>
-                                </select> <select id="_grade" class="form-control">
+                                </select> <select id="_grade" name="_grade" class="form-control">
                                 <option value="A+">A+</option>
                                 <option value="A">A</option>
                                 <option value="B+">B+</option>
@@ -211,7 +259,7 @@ $("#GPAChart").CanvasJSChart(options);
                                 <option value="D">D</option>
                                 <option value="F">F</option>
                                 <option value="P">P</option>
-                            </select> <select id="_semester" class="form-control">
+                            </select> <select id="_semester" name="_semester" class="form-control">
                                 <option value="1-1">1학년 1학기</option>
                                 <option value="1-2">1학년 2학기</option>
                                 <option value="2-1">2학년 1학기</option>
@@ -226,9 +274,9 @@ $("#GPAChart").CanvasJSChart(options);
                             </div>
                         </div>
                         <div class="text-center" style="margin: 10px">
-                        <input type="submit" value="입력" class="btn-lg btn-primary"
-                                style="width: 100px"/>
-                    </div>
+                            <input type="submit" value="입력" class="btn-lg btn-primary"
+                                   style="width: 100px"/>
+                        </div>
                     </form>
 
                     <div class="card-footer small text-muted"></div>
@@ -246,7 +294,11 @@ $("#GPAChart").CanvasJSChart(options);
                             </select>
                         </div>
                         <div class="card-body">
-                            <canvas id="GPAChart" width="100%" height="50"></canvas>
+                            <!--<canvas id="GPAChart" width="100%" height="50"></canvas>-->
+                            <p>{{total}}</p>
+                            <p>{{major}}</p>
+                            <p>{{not_major}}</p>
+                            <p>{{semester}}</p>
                         </div>
                         <div class="card-footer small text-muted"></div>
                     </div>
@@ -332,13 +384,3 @@ $("#GPAChart").CanvasJSChart(options);
 <!-- Custom scripts for all pages-->
 <script src="../static/js/sb-admin.min.js"></script>
 
-<!-- Demo scripts for this page-->
-<script src="../static/js/demo/chart-bar-demo.js"></script>
-<!-- 데이터 수정하는 파트 -->
-
-<!-- 총 이수학점, GPA 나타내는 부분 -->
-<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-</body>
-
-</html>

@@ -29,6 +29,46 @@ def login(ID, password):
         driver.find_element_by_name('password').send_keys(password)
         driver.find_element_by_xpath('//*[@id="region-main"]/div/div/div[1]/div[2]/div[1]/form/div[3]/button').click()
         source = driver.page_source
+
+        bs = bs4.BeautifulSoup(source, 'lxml')
+        name = bs.find('li', class_='user_department hidden-xs')
+        print(name)
+        timeline = bs.find('div', class_='block block-upcomming block-coursemos ')
+        title1 = timeline.find_all('h5')
+        time1 = timeline.find_all('p')
+        todo = bs.find('div', class_='block block-notification block-coursemos ')
+        title2 = todo.find_all('h5')
+        time2 = todo.find_all('p')
+        conn = pymysql.connect(
+            host='localhost', user='root', password='12345', charset='utf8', db='web')
+        try:
+            with conn.cursor() as cursor:
+                sql = 'delete from service_LoginUser where userid=%s'
+                cursor.execute(sql, ID)
+                sql = 'delete from service_UserTodo where name=%s'
+                cursor.execute(sql, ID)
+                sql = 'delete from service_User_Info where name=%s'
+                cursor.execute(sql, ID)
+                sql = 'insert into service_LoginUser (userid, name) values(%s, %s)'
+                cursor.execute(sql, (ID, name.text.encode('utf-8')))
+            conn.commit()
+
+            with conn.cursor() as cursor:
+                for i in range(0, len(title1)):
+                    sql = 'insert into service_UserTodo (name, todo, deadline) values(%s, %s, %s)'
+                    cursor.execute(sql, (ID, title1[i].text.encode('utf-8'), time1[i].text.encode('utf-8')))
+                    print(title1[i].text.encode('utf-8'))
+                    print(time1[i].text.encode('utf-8'))
+                for i in range(0, len(title2)):
+                    sql = 'insert into service_User_Info (name, classes, todo) values(%s, %s, %s)'
+                    cursor.execute(sql, (ID, title2[i].text.encode('utf-8'), time2[i].text.encode('utf-8')))
+                    print(title2[i].text.encode('utf-8'))
+                    print(time2[i].text.encode('utf-8'))
+            conn.commit()
+        finally:
+            conn.close()
+
+        driver.close()
     except UnexpectedAlertPresentException:
         # login failure
         print("login failure")
@@ -39,39 +79,7 @@ def login(ID, password):
         print("login failure")
         driver.close()
         return False
-    bs = bs4.BeautifulSoup(source, 'lxml')
-    name = bs.find('li', class_='user_department hidden-xs')
-    print(name)
-    timeline = bs.find('div', class_='block block-upcomming block-coursemos ')
-    title1 = timeline.find_all('h5')
-    time1 = timeline.find_all('p')
-    Title1 = []
-    for list in title1:
-        Title1.append(list.text.encode('utf-8'))
-    Time1 = []
-    for list in time1:
-        Time1.append(list.text.encode('utf-8'))
-    for list in Title1:
-        print(list)
-    for list in Time1:
-        print(list)
-    todo = bs.find('div', class_='block block-notification block-coursemos ')
-    title2 = todo.find_all('h5')
-    time2 = todo.find_all('p')
-
-    Title2 = []
-    for list in title2:
-        Title2.append(list.text.encode('utf-8'))
-    Time2 = []
-    for list in time2:
-        Time2.append(list.text.encode('utf-8'))
-    for list in Title2:
-        print(list)
-    for list in Time2:
-        print(list)
-    driver.close()
     return True
-
 
 def lib():
     # 도서관
@@ -247,6 +255,17 @@ def sqlsave():
 
 class crwaling(threading.Thread):
     def run(self):
+        conn = pymysql.connect(
+            host='localhost', user='root', password='12345', charset='utf8', db='web')
+        try:
+            with conn.cursor() as cursor:
+                sql = 'TRUNCATE TABLE service_loginrequest'
+                cursor.execute(sql, ())
+                sql = 'TRUNCATE TABLE service_loginresult'
+                cursor.execute(sql, ())
+            conn.commit()
+        finally:
+            conn.close()
         while True:
             conn = pymysql.connect(host='localhost', user='root', password='12345', charset='utf8', db='web')
             try:

@@ -70,4 +70,20 @@ class Grade(models.Model):
     major = models.BooleanField(null=False, default=False)
     subject = models.CharField(null=True, max_length=20)
 
+
+class LoginUser(models.Model):
+    userid = models.CharField(max_length=50, blank=True)
+    name = models.CharField(max_length=50, blank=True)
+
+
+class UserTodo(models.Model):
+    name = models.CharField(max_length=50, blank=True)
+    todo = models.TextField()
+    deadline = models.DateTimeField()
+
+
+class User_Info(models.Model):
+    name = models.CharField(max_length=50, blank=True)
+    classes = models.TextField()
+    todo = models.TextField()
 # Create your models here.
