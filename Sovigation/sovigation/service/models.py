@@ -62,6 +62,23 @@ class LoginResult(models.Model):
     result = models.BooleanField()
 
 
+class LoginUser(models.Model):
+    userid = models.CharField(max_length=50, blank=True)
+    name = models.CharField(max_length=50, blank=True)
+
+
+class UserTodo(models.Model):
+    name = models.CharField(max_length=50, blank=True)
+    todo = models.TextField()
+    deadline = models.DateTimeField()
+
+
+class UserInfo(models.Model):
+    name = models.CharField(max_length=50, blank=True)
+    classes = models.TextField()
+    todo = models.TextField()
+    
+    
 class Grade(models.Model):
     user = models.ForeignKey(UserInfo, on_delete=models.CASCADE)
     grade = models.CharField(max_length=2)
