@@ -139,12 +139,12 @@ def board1(request):
   print("totalCnt = "+str(totalCnt))
   print("pagingHelperIns = "+str(pagingHelperIns))
   print("totalPageList = "+str(totalPageList))
-  return render_to_response('BoardPage.html', {'boardList': boardList, 'totalCnt': totalCnt,
+  return render_to_response('service/BoardPage.html', {'boardList': boardList, 'totalCnt': totalCnt,
                                                'current_page': current_page, 'totalPageList': totalPageList})
 
 
 def write(request):
-  return render_to_response('writeBoard.html')
+  return render_to_response('service/writeBoard.html')
 
 
 @csrf_exempt
@@ -171,7 +171,7 @@ def listpage(request):
   print 'boardList=', boardList, 'count()=', totalCnt
   pagingHelperIns = pagingHelper()
   totalPageList = pagingHelperIns.getTotalPageList(totalCnt, rowsPerPage)
-  return render_to_response('BoardPage.html', {'boardList': boardList, 'totalCnt': totalCnt,
+  return render_to_response('service/BoardPage.html', {'boardList': boardList, 'totalCnt': totalCnt,
                                                'current_page': int(current_page),
                                                'totalPageList': totalPageList})
 
@@ -180,7 +180,7 @@ def viewwork(request):
   pk = request.GET['memo_id']
   boardData = Board.objects.get(id=pk)
   Board.objects.filter(id=pk).update(hits=boardData.hits + 1)
-  return render_to_response('viewMemo.html', {'memo_id': request.GET['memo_id'],
+  return render_to_response('service/viewMemo.html', {'memo_id': request.GET['memo_id'],
                                               'current_page': request.GET['current_page'],
                                               'searchStr': request.GET['searchStr'],
                                               'boardData': boardData})
@@ -195,7 +195,7 @@ def searchedpage(request):
   boardList = Board.objects.raw("SELECT * FROM sovigation_board WHERE SUBJECT LIKE '%%"+searchStr+"%%' ORDER BY ID DESC")
   print 'searchStr=', searchStr, 'pageForView=', pageForView
   print 'boardList=', boardList, 'count()=', totalCnt
-  return render_to_response('SearchedPage.html', {'boardList': boardList, 'totalCnt': totalCnt,
+  return render_to_response('service/SearchedPage.html', {'boardList': boardList, 'totalCnt': totalCnt,
                                                   'pageForView': int(pageForView), 'searchStr': searchStr,
                                                   'totalPageList': totalPageList})
 
@@ -205,7 +205,7 @@ def listupdate(request):
   current_page = request.GET['current_page']
   searchStr = request.GET['searchStr']
   boardData = Board.objects.get(id=memo_id)
-  return render_to_response('listUpdate.html', {'memo_id': request.GET['memo_id'],
+  return render_to_response('service/listUpdate.html', {'memo_id': request.GET['memo_id'],
                                                 'current_page': current_page,
                                                 'searchStr': searchStr,
                                                 'boardData': boardData})
