@@ -9,7 +9,6 @@ urlpatterns = [
     url(r'^index/$', views.index),
     url(r'^about/$', views.about),
     url(r'^assignment/$', views.assignment),
-    url(r'^board/$', views.board),
     url(r'^food/$', views.food),
     url(r'^grade/$', views.get_all_grades),
     url(r'^lib/$', views.lib),
@@ -19,7 +18,7 @@ urlpatterns = [
     url(r'^dologin/$', views.dologin),
     url(r'^insert/$', views.insert_grade),
 
-    url(r'^board1/$', views.board1),
+    url(r'^board/$', views.board),
     url(r'^write/$', views.write),
     url(r'^dowrite/$', views.dowrite),
     url(r'^searchedPage/$', views.searchedpage),

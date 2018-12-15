@@ -25,78 +25,35 @@
 
     <!-- Custom styles for this template-->
     <link href="../static/css/sb-admin.css" rel="stylesheet">
+    <!--구글 폰트-->
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
 
-    <style>
-    #container {
-    margin: 20px;
-    width: 200px;
-    height: 200px;
-    position: relative;
+<script>
+    function change_semester(val){
+    if(val=='total_gpa'){
+    $('#semester_area').text("{{total_grade}} / 4.5")
+    }
+    else{
+    $('#semester_area').text("{{total_credit}} / 120" )
+    }
     }
 
-    </style>
+    function change_major(val){
+     if(val=='major'){
+    $('#major_area').text("{{major}}")
+    }
+    else{
+    $('#major_area').text("{{not_major}}" )
 
-</head>
+    }
+    }
+</script>
 <!-- 제이쿼리 사용 -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script>
-    $(document).ready(function() {
-  $('#dataTable').DataTable();
-});
 
-</script>
-
-<script>
-Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
-Chart.defaults.global.defaultFontColor = '#292b2c';
-
-// Bar Chart Example
-var ctx = document.getElementById("myBarChart");
-var myLineChart = new Chart(ctx, {
-	type : 'bar',
-	data : {
-		labels : [ "1학년 1학기", "1학년 2학기", "2학년 1학기", "2학년 2학기", "3학년 1학기",
-				"3학년 2학기", "4학년 1학기", "4학년 2학기" ],
-		datasets : [ {
-			label : "Revenue",
-			backgroundColor : "rgba(92,180,193,1)",
-			borderColor : "rgba(2,117,216,1)",
-			data : semester,
-		} ],
-	},
-	options : {
-		scales : {
-			xAxes : [ {
-				time : {
-					unit : 'semester'
-				},
-				gridLines : {
-					display : false
-				},
-				ticks : {
-					maxTicksLimit : 6
-				}
-			} ],
-			yAxes : [ {
-				ticks : {
-					min : 0.0,
-					max : 4.5,
-					maxTicksLimit : 0.5
-				},
-				gridLines : {
-					display : true
-				}
-			} ],
-		},
-		legend : {
-			display : false
-		}
-	}
-});
-
-</script>
 <body id="page-top">
 
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
@@ -120,7 +77,7 @@ var myLineChart = new Chart(ctx, {
             <div class="dropdown-menu dropdown-menu-right"
                  aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#" data-toggle="modal"
-                   data-target="#logoutModal">Logout</a>
+                   data-target="#logoutModal">로그아웃</a>
             </div>
         </li>
     </ul>
@@ -135,7 +92,7 @@ var myLineChart = new Chart(ctx, {
         </a></li>
         <!-- 개인서비스 대시보드 묘묘 -->
         <li class="nav-item dropdown"><a
-                class="nav-link dropdown-toggle" href="#"
+                class="nav-link dropdown-toggle" href="/myService/"
                 role="button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false"> <i class="fas fa-fw fa-folder"></i> <span>개인
 						서비스</span>
@@ -158,7 +115,7 @@ var myLineChart = new Chart(ctx, {
                 <h6 class="dropdown-header">커뮤니티 서비스 목록:</h6>
                 <a class="dropdown-item" href="/food/">오늘의 식단 보러가기</a> <a
                     class="dropdown-item" href="/lib/">도서관 자리 보러가기</a> <a
-                    class="dropdown-item" href="/board1/">소식 게시판</a>
+                    class="dropdown-item" href="/board/">소식 게시판</a>
             </div>
         </li>
     </ul>
@@ -180,7 +137,7 @@ var myLineChart = new Chart(ctx, {
                     </div>
                     <div class="card-body">
                         <!-- <canvas id="myBarChart" width="100%" height="50"></canvas>-->
-                        <canvas id="myChart" width="100%" height="50"></canvas>
+                        <canvas id="myChart" width="100%" height="40"></canvas>
                         <script>
 var ctx = document.getElementById("myChart").getContext('2d');
 var semester_grade = {{semester}}
@@ -190,7 +147,7 @@ var myChart = new Chart(ctx, {
 		labels : [ "1학년 1학기", "1학년 2학기", "2학년 1학기", "2학년 2학기", "3학년 1학기",
 				"3학년 2학기", "4학년 1학기", "4학년 2학기" ],
 		datasets : [ {
-			label : "Revenue",
+			label : "전체 학기",
 			backgroundColor : "rgba(92,180,193,1)",
 			borderColor : "rgba(2,117,216,1)",
 			data : semester_grade,
@@ -205,7 +162,7 @@ var myChart = new Chart(ctx, {
 					display : false
 				},
 				ticks : {
-					maxTicksLimit : 6
+					maxTicksLimit : 8
 				}
 			} ],
 			yAxes : [ {
@@ -224,6 +181,13 @@ var myChart = new Chart(ctx, {
 		}
 	}
 });
+
+
+
+
+
+
+
 
                         </script>
                     </div>
@@ -288,17 +252,18 @@ var myChart = new Chart(ctx, {
                     <div class="card mb-3">
                         <div class="card-header form-inline">
                             <i class="fas fa-chart-bar"></i>전체 학기 GPA/총 이수학점 보기&nbsp;&nbsp;
-                            <select class="form-control">
-                                <option value="">GPA</option>
-                                <option value="">총 이수학점</option>
+                            <select class="form-control" onchange="change_semester(this.value);">
+                                <option value="total_gpa">GPA</option>
+                                <option value="total_credit">총 이수학점</option>
                             </select>
                         </div>
                         <div class="card-body">
                             <!--<canvas id="GPAChart" width="100%" height="50"></canvas>-->
-                            <p>{{total}}</p>
-                            <p>{{major}}</p>
-                            <p>{{not_major}}</p>
-                            <p>{{semester}}</p>
+                            <div align="center">
+                                <h1 id="semester_area" style="font-family: 'Do Hyeon', sans-serif; font-size:100px">
+                                    {{total_grade}} /
+                                    4.5 </h1>
+                            </div>
                         </div>
                         <div class="card-footer small text-muted"></div>
                     </div>
@@ -309,12 +274,16 @@ var myChart = new Chart(ctx, {
                     <div class="card mb-3">
                         <div class="card-header form-inline">
                             <i class="fas fa-chart-bar"></i> 전공/교양별 학점 보기&nbsp;&nbsp; <select
-                                class="form-control">
-                            <option value="">전공</option>
-                            <option value="">교양</option>
+                                class="form-control" onchange="change_major(this.value);">
+                            <option value="major">전공</option>
+                            <option value="not_major">교양</option>
                         </select>
                         </div>
-                        <div class="card-body"></div>
+                        <div class="card-body">
+                            <div align="center"><h1 id="major_area"
+                                                    style="font-family: 'Do Hyeon', sans-serif; font-size:100px">
+                                {{major}}</h1></div>
+                        </div>
                         <div class="card-footer small text-muted"></div>
                     </div>
                 </div>
@@ -353,20 +322,20 @@ var myChart = new Chart(ctx, {
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <h5 class="modal-title" id="exampleModalLabel">로그아웃을 하시겠습니까?</h5>
                 <button class="close" type="button" data-dismiss="modal"
                         aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">Select "Logout" below if you are ready
-                to end your current session.
+            <div class="modal-body">
+                로그아웃을 하시려면 로그아웃 버튼을 눌러주세요!
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button"
-                        data-dismiss="modal">Cancel
+                        data-dismiss="modal">취소하기
                 </button>
-                <a class="btn btn-primary" href="/login/">Logout</a>
+                <a class="btn btn-primary" href="/login/">로그아웃하기</a>
             </div>
         </div>
     </div>

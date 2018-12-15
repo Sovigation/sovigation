@@ -12,36 +12,38 @@
     <session id="-1184827030">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="18" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="3" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="6" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="db" value="3" />
-          <entry key="html" value="59" />
-          <entry key="js" value="5" />
+          <entry key="html" value="99" />
+          <entry key="js" value="7" />
           <entry key="map" value="1" />
-          <entry key="py" value="170" />
+          <entry key="py" value="183" />
           <entry key="scss" value="2" />
           <entry key="sqlite3" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="59" />
-          <entry key="JavaScript" value="5" />
+          <entry key="HTML" value="99" />
+          <entry key="JavaScript" value="7" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="170" />
+          <entry key="Python" value="183" />
           <entry key="SQL" value="3" />
         </counts>
       </usages-collector>
@@ -49,52 +51,61 @@
         <counts>
           <entry key="Python Console" value="3" />
           <entry key="db" value="8" />
-          <entry key="html" value="2205" />
+          <entry key="html" value="4682" />
           <entry key="js" value="2" />
-          <entry key="py" value="8763" />
+          <entry key="py" value="9377" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2205" />
+          <entry key="HTML" value="4682" />
           <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="8766" />
+          <entry key="Python" value="9380" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1251184397">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="5" />
+          <entry key="py" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="5" />
+          <entry key="Python" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="7" />
+          <entry key="py" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="7" />
+          <entry key="Python" value="12" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/myService.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sovigation/service/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
-              <folding>
-                <element signature="e#24#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/lib.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="118" column="74" selection-start-line="118" selection-start-column="74" selection-end-line="118" selection-end-column="74" />
-              <folding>
-                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="389">
+              <caret line="52" column="69" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -102,30 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/grade.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="146" column="12" selection-start-line="146" selection-start-column="12" selection-end-line="146" selection-end-column="12" />
-              <folding>
-                <element signature="e#8249#8255#0" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/assignment.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/food.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="131" column="55" selection-start-line="131" selection-start-column="55" selection-end-line="131" selection-end-column="55" />
+            <state relative-caret-position="161">
+              <caret line="78" column="39" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -142,36 +131,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>doL</find>
-      <find>db</find>
-      <find>database</find>
-      <find>web</find>
-      <find>def</find>
-      <find>save</find>
-      <find>sqlsave</find>
-      <find>vis</find>
-      <find>dol</find>
-      <find>id</find>
-      <find>sql</find>
-      <find>doLo</find>
-      <find>dolo</find>
-      <find>form</find>
-      <find>credit</find>
-      <find>dologin</find>
-      <find>request</find>
-      <find>LoginResult</find>
-      <find>나의 학점</find>
-      <find>myBar</find>
-      <find>myBarChart</find>
-      <find>전체 학기</find>
-      <find>major</find>
-      <find>총 이수학점</find>
-      <find>총 이수</find>
-      <find>style</find>
-      <find>render</find>
-      <find>my</find>
       <find>url</find>
       <find>myservice</find>
+      <find>myChart</find>
+      <find>assign</find>
+      <find>총</find>
+      <find>change</find>
+      <find>총 이수</find>
+      <find>head</find>
+      <find>GPA</find>
+      <find>구글</find>
+      <find>커뮤</find>
+      <find>개인</find>
+      <find>table</find>
+      <find>이름</find>
+      <find>sovigation</find>
+      <find>글쓰기</find>
+      <find>소식</find>
+      <find>style</find>
+      <find>dologin</find>
+      <find>소식게시판</find>
+      <find>div class=&quot;col-md-4&quot;&gt;&lt;in</find>
+      <find>board</find>
+      <find>time</find>
+      <find>service</find>
+      <find>Logout</find>
+      <find>grade</find>
+      <find>Log</find>
+      <find>modal</find>
+      <find>로그아웃</find>
+      <find>logout</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -179,9 +168,6 @@
       <list>
         <option value="$PROJECT_DIR$/sovigation/service/templates/index.html" />
         <option value="$PROJECT_DIR$/sovigation/service/templates/service/index.html" />
-        <option value="$PROJECT_DIR$/sovigation/service/templates/service/about.html" />
-        <option value="$PROJECT_DIR$/sovigation/service/templates/service/board.html" />
-        <option value="$PROJECT_DIR$/sovigation/service/templates/service/to_do.html" />
         <option value="$PROJECT_DIR$/sovigation/service/apps.py" />
         <option value="$PROJECT_DIR$/sovigation/service/manage.py" />
         <option value="$PROJECT_DIR$/sovigation/admin.py" />
@@ -198,7 +184,6 @@
         <option value="$PROJECT_DIR$/sovigation/manage.py" />
         <option value="$PROJECT_DIR$/sovigation/service/sovigation.db" />
         <option value="$PROJECT_DIR$/sovigation/service/templates/service/re3.html" />
-        <option value="$PROJECT_DIR$/sovigation/settings.py" />
         <option value="$PROJECT_DIR$/sovigation/sovigation/settings.py" />
         <option value="$PROJECT_DIR$/sovigation/service/templates/service/login.html" />
         <option value="$PROJECT_DIR$/sovigation/service/forms.py" />
@@ -208,28 +193,34 @@
         <option value="$PROJECT_DIR$/sovigation/service/static/js/demo/datatables-demo.js" />
         <option value="$PROJECT_DIR$/sovigation/service/static/js/demo/chart-bar-demo.js" />
         <option value="$PROJECT_DIR$/sovigation/service/templates/service/SearchedPage.html" />
-        <option value="$PROJECT_DIR$/sovigation/service/templates/service/viewMemo.html" />
-        <option value="$PROJECT_DIR$/sovigation/service/templates/service/writeBoard.html" />
-        <option value="$PROJECT_DIR$/sovigation/service/templates/service/listUpdate.html" />
-        <option value="$PROJECT_DIR$/sovigation/service/models.py" />
-        <option value="$PROJECT_DIR$/sovigation/service/main.py" />
-        <option value="$PROJECT_DIR$/sovigation/service/templates/service/myService.html" />
-        <option value="$PROJECT_DIR$/sovigation/service/views.py" />
-        <option value="$PROJECT_DIR$/sovigation/service/urls.py" />
         <option value="$PROJECT_DIR$/sovigation/service/pagingHelper.py" />
         <option value="$PROJECT_DIR$/sovigation/service/templates/service/BoradPage.html" />
+        <option value="$PROJECT_DIR$/sovigation/settings.py" />
+        <option value="$PROJECT_DIR$/sovigation/service/templates/service/about.html" />
+        <option value="$PROJECT_DIR$/sovigation/service/templates/service/board.html" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/sovigation/service/models.py" />
+        <option value="$PROJECT_DIR$/sovigation/service/urls.py" />
+        <option value="$PROJECT_DIR$/sovigation/service/main.py" />
+        <option value="$PROJECT_DIR$/sovigation/service/views.py" />
         <option value="$PROJECT_DIR$/sovigation/service/templates/service/grade.html" />
         <option value="$PROJECT_DIR$/sovigation/service/templates/service/assignment.html" />
+        <option value="$PROJECT_DIR$/sovigation/service/templates/service/BoardPage.html" />
         <option value="$PROJECT_DIR$/sovigation/service/templates/service/food.html" />
         <option value="$PROJECT_DIR$/sovigation/service/templates/service/lib.html" />
+        <option value="$PROJECT_DIR$/sovigation/service/templates/service/listUpdate.html" />
+        <option value="$PROJECT_DIR$/sovigation/service/templates/service/to_do.html" />
+        <option value="$PROJECT_DIR$/sovigation/service/templates/service/viewMemo.html" />
+        <option value="$PROJECT_DIR$/sovigation/service/templates/service/writeBoard.html" />
+        <option value="$PROJECT_DIR$/sovigation/service/templates/service/myService.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="352" />
-    <option name="y" value="72" />
+    <option name="x" value="75" />
+    <option name="y" value="282" />
     <option name="width" value="980" />
-    <option name="height" value="1029" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -247,6 +238,11 @@
             <path>
               <item name="Sovigation" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sovigation" type="462c0819:PsiDirectoryNode" />
+              <item name="driver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sovigation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sovigation" type="462c0819:PsiDirectoryNode" />
               <item name="sovigation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -269,6 +265,16 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sovigation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sovigation" type="462c0819:PsiDirectoryNode" />
+              <item name="sovigation" type="462c0819:PsiDirectoryNode" />
+              <item name="sovigation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sovigation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -279,7 +285,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="Chart.js&#9;FILE&#9;file://C:/Users/GENIE/PycharmProjects/Sovigation/service/static/vendor2/chart.js/Chart.js&#10;dataTable&#9;FILE&#9;file://C:/Users/GENIE/PycharmProjects/Sovigation/service/static/js/demo/datatables-demo.js&#10;web&#9;FILE&#9;file://C:/Users/GENIE/Anaconda3/pkgs/statsmodels-0.9.0-py37h452e1ab_0/Lib/site-packages/statsmodels/tools/web.py&#10;initial&#9;FILE&#9;file://C:/Users/GENIE/PycharmProjects/Sovigation/sovigation/service/migrations/0001_initial.py&#10;migration&#9;null&#9;null&#10;settings&#9;FILE&#9;file://C:/Users/GENIE/PycharmProjects/Sovigation/sovigation/sovigation/settings.py" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sovigation/service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -291,16 +297,16 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\GENIE\PycharmProjects\Sovigation\sovigation\service\static" />
+      <recent name="C:\Users\GENIE\PycharmProjects\Sovigation\driver" />
+      <recent name="C:\Users\GENIE\PycharmProjects\Sovigation\sovigation\service\templates\service" />
+      <recent name="C:\Users\GENIE\PycharmProjects\Sovigation\sovigation\service\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\GENIE\PycharmProjects\Sovigation\sovigation" />
       <recent name="C:\Users\GENIE\PycharmProjects\Sovigation\sovigation\sovigation" />
       <recent name="C:\Users\GENIE\PycharmProjects\Sovigation\sovigation\service" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\GENIE\PycharmProjects\Sovigation\driver" />
-      <recent name="C:\Users\GENIE\PycharmProjects\Sovigation\sovigation\service\templates\service" />
-      <recent name="C:\Users\GENIE\PycharmProjects\Sovigation\sovigation\service\templates" />
-      <recent name="C:\Users\GENIE\PycharmProjects\Sovigation\sovigation\service\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -369,20 +375,20 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18307997" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.26107073" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4976867" weight="0.3319149" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4970258" weight="0.14184397" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4970258" weight="0.3319149" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49636483" weight="0.3432624" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29929078" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.26524824" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5399868" side_tool="true" visible="true" weight="0.035460994" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49504295" weight="0.33049646" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4600132" visible="true" weight="0.035460994" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5439524" side_tool="true" weight="0.39007092" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49327958" weight="0.32907802" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4560476" visible="true" weight="0.11631206" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -411,48 +417,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sovigation/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/sovigation.db" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/tokenize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-931">
-          <caret line="446" selection-start-line="446" selection-end-line="446" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/re3.html" />
-    <entry file="file://$PROJECT_DIR$/sovigation/sovigation/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pymysql/err.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pymysql/err.py" />
     <entry file="file://$PROJECT_DIR$/db.sqlite3">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sovigation/sovigation/db.sqlite3">
       <provider selected="true" editor-type-id="text-editor" />
@@ -460,89 +427,14 @@
     <entry file="file://$PROJECT_DIR$/sovigation/service/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/pkgs/statsmodels-0.9.0-py37h452e1ab_0/Lib/site-packages/statsmodels/tools/web.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="79" column="53" lean-forward="true" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/db/migrations/executor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/db/migrations/recorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/sovigation/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1463">
-          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/views/debug.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="382" selection-start-line="382" selection-end-line="382" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/wsgiref/handlers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/migrations/0002_grade.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/MySQLdb/connections.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="279" selection-start-line="279" selection-end-line="279" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/pkgs/statsmodels-0.9.0-py37h452e1ab_0/Lib/site-packages/statsmodels/tools/web.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/db/migrations/executor.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/db/migrations/recorder.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/views/debug.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/wsgiref/handlers.py" />
+    <entry file="file://$PROJECT_DIR$/sovigation/service/forms.py" />
+    <entry file="file://$PROJECT_DIR$/sovigation/service/migrations/0002_grade.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/MySQLdb/connections.py" />
     <entry file="file://$PROJECT_DIR$/sovigation/service/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
@@ -559,94 +451,18 @@
     <entry file="file://$PROJECT_DIR$/service/static/vendor2/chart.js/Chart.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/static/js/demo/datatables-demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/static/js/demo/datatables-demo.js" />
     <entry file="file://$PROJECT_DIR$/sovigation/service/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/myOutput.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/static/js/demo/chart-bar-demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/myOutput.html" />
+    <entry file="file://$PROJECT_DIR$/sovigation/service/static/js/demo/chart-bar-demo.js" />
     <entry file="file://$PROJECT_DIR$/sovigation/web.db">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/SearchedPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/viewMemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/writeBoard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
-          <folding>
-            <element signature="e#24#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/listUpdate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sovigation/service/pagingHelper.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -655,80 +471,200 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sovigation/views.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/views.py">
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/contact.html" />
+    <entry file="file://$PROJECT_DIR$/sovigation/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="81" column="13" lean-forward="true" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+        <state relative-caret-position="57">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1395" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/BoardPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/myService.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/board.html">
+    <entry file="file://$PROJECT_DIR$/sovigation/service/static/nse_files/js/jindo.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/grade.html">
+    <entry file="file://$PROJECT_DIR$/sovigation/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="146" column="12" selection-start-line="146" selection-start-column="12" selection-end-line="146" selection-end-column="12" />
+        <state relative-caret-position="228">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/game/conda/envs/web/Lib/importlib/__init__.py" />
+    <entry file="file://E:/game/conda/envs/web/Lib/site-packages/django/core/management/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/sovigation/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/sovigation/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/sovigation/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/board.html" />
+    <entry file="file://$PROJECT_DIR$/sovigation/service/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="48" column="30" lean-forward="true" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="302" column="16" lean-forward="true" selection-start-line="302" selection-start-column="16" selection-end-line="302" selection-end-column="16" />
           <folding>
-            <element signature="e#8249#8255#0" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#24#60#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/assignment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+        <state relative-caret-position="313">
+          <caret line="106" column="20" lean-forward="true" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/BoardPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="99" column="18" lean-forward="true" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/food.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="131" column="55" selection-start-line="131" selection-start-column="55" selection-end-line="131" selection-end-column="55" />
+        <state relative-caret-position="142">
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/lib.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="118" column="74" selection-start-line="118" selection-start-column="74" selection-end-line="118" selection-end-column="74" />
+        <state relative-caret-position="198">
+          <caret line="226" column="18" lean-forward="true" selection-start-line="226" selection-start-column="18" selection-end-line="226" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/SearchedPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/listUpdate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="142" column="39" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="39" />
           <folding>
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/to_do.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/viewMemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="167" column="50" selection-start-line="167" selection-start-column="50" selection-end-line="167" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/writeBoard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="128" column="25" lean-forward="true" selection-start-line="128" selection-start-column="25" selection-end-line="128" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/grade.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="78" column="39" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sovigation/service/templates/service/myService.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="52" column="69" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
         </state>
       </provider>
     </entry>

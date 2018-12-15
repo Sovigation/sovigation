@@ -14,12 +14,13 @@ from .models import LoginRequest
 from .models import LoginResult
 from .models import Grade
 from .models import Board
+from .models import UserTodo
+from .models import LoginUser
 from .pagingHelper import pagingHelper
 from django.core.exceptions import ObjectDoesNotExist
 from django.views.decorators.csrf import csrf_exempt
 from django.utils import timezone
 import time
-
 
 rowsPerPage = 5
 
@@ -34,11 +35,14 @@ def dologin(request):
     )
     lr.save()
 
-    time.sleep(10)
+    time.sleep(15)
     try:
         result = LoginResult.objects.get(name=ID)
         if result.result:
             url = '/myService'
+            name = LoginUser.objects.get(userid=ID)
+            request.session['name'] = name.name
+            request.session['ID'] = name.userid
         else:
             url = '/login'
         result.delete()
@@ -47,7 +51,7 @@ def dologin(request):
     return HttpResponseRedirect(url)
 
 
-def board1(request):
+def board(request):
     boardList = Board.objects.order_by('-id').all()
     try:
         current_page = request.GET['current_page']
@@ -73,8 +77,7 @@ def write(request):
 @csrf_exempt
 def dowrite(request):
     br = Board(subject=request.POST['subject'],
-               name=request.POST['name'],
-               mail=request.POST['email'],
+               name=request.session['name'],
                memo=request.POST['memo'],
                created_date=timezone.now(),
                hits=0
@@ -144,7 +147,6 @@ def updateboard(request):
     current_page = request.POST['current_page']
     searchStr = request.POST['searchStr']
     Board.objects.filter(id=memo_id).update(
-        mail=request.POST['mail'],
         subject=request.POST['subject'],
         memo=request.POST['memo']
     )
@@ -198,11 +200,8 @@ def about(request):
 
 
 def assignment(request):
-    return render(request, 'service/assignment.html')
-
-
-def board(request):
-    return render(request, 'service/board.html')
+    todo = UserTodo.objects.raw('SELECT * from service_UserTodo where name = %s', [request.session['ID']])
+    return render_to_response('service/assignment.html', {'todo': todo})
 
 
 def food(request):
@@ -342,15 +341,37 @@ def get_semester_grades(user):
 def get_all_grades(request):
     user = get_current_user(request)
 
-    total = get_total_grade(user)
+    total_grade = get_total_grade(user)
     major_grade = get_major_grade(user)
     not_major_grade = get_not_major_grade(user)
-    semester_grade = get_semester_grades(user)
+    total_credit = get_total_credits(user)
+    semester_grades = get_semester_grades(user)
 
-    return render(request, 'service/grade.html',
-                  {'total': total, 'major': major_grade, 'not_major': not_major_grade, 'semester': semester_grade})
+    return render(request, 'service/grade.html', {
+                      'total_grade': total_grade,
+                      'major': major_grade,
+                      'not_major': not_major_grade,
+                      'total_credit': total_credit,
+                      'semester': semester_grades,
+                      'session': request.session['user']
+                  })
 
 
 def get_current_user(request):
     user_id = request.session['user']
     return UserInfo.objects.get(username=user_id)
+
+
+def get_total_credits(user):
+    records = Grade.objects.filter(user=user)
+    return credit_calculator(records)
+
+
+def credit_calculator(records):
+
+    total_credit = 0
+    for record in records:
+        credit = record.credit
+        total_credit += credit
+
+    return total_credit

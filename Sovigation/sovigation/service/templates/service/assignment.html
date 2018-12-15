@@ -27,7 +27,51 @@
 
     <!-- Custom styles for this template-->
     <link href="../static/css/sb-admin.css" rel="stylesheet">
+    <style>
+table.type10 {
+	border-collapse: collapse;
+	text-align: center;
+	line-height: 1.5;
+	margin: 20px 10px;
+}
 
+table.type10 thead th {
+	width: 150px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	color: #fff;
+	background: #87C7D1;
+	margin: 20px 10px;
+}
+
+table.type10 tbody th {
+	width: 150px;
+	padding: 10px;
+}
+
+table.type10 td {
+	width: 350px;
+	padding: 10px;
+	vertical-align: top;
+}
+
+table.type10 .even {
+	background: #E1F0F3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
 </head>
 
 <body id="page-top">
@@ -53,7 +97,7 @@
             <div class="dropdown-menu dropdown-menu-right"
                  aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#" data-toggle="modal"
-                   data-target="#logoutModal">Logout</a>
+                   data-target="#logoutModal">로그아웃</a>
             </div>
         </li>
     </ul>
@@ -91,7 +135,7 @@
                 <h6 class="dropdown-header">커뮤니티 서비스 목록:</h6>
                 <a class="dropdown-item" href="/food/">오늘의 식단 보러가기</a> <a
                     class="dropdown-item" href="/lib/">도서관 자리 보러가기</a> <a
-                    class="dropdown-item" href="/board1/">소식 게시판</a></div>
+                    class="dropdown-item" href="/board/">소식 게시판</a></div>
         </li>
     </ul>
     <div id="content-wrapper">
@@ -104,40 +148,50 @@
                 <li class="breadcrumb-item active">과제물 관리하기</li>
             </ol>
 
-            <!-- Icon Cards-->
-            <div class="row">
-                <div class="col-xl-3 col-sm-6 mb-3">
-                    <div class="card text-white bg-primary o-hidden h-100">
-                        <div class="card-body">
-                            <div class="card-body-icon">
-                                <i class="fas fa-fw fa-comments"></i>
-                            </div>
-                            <div class="mr-5">개인 서비스</div>
-                        </div>
-                        <a class="card-footer text-white clearfix small z-1" href="#">
-                            <span class="float-left">View Details</span> <span
-                                class="float-right"> <i class="fas fa-angle-right"></i>
-							</span>
-                        </a>
+            <div class="col-lg-12">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <i class="fas fa-calendar-check"> 과제 목록 보기</i>
                     </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-3">
-                    <div class="card text-white bg-warning o-hidden h-100">
+                    <form method="post" action="/insert/" class="form-inline"> {% csrf_token %}
                         <div class="card-body">
-                            <div class="card-body-icon">
-                                <i class="fas fa-fw fa-list"></i>
+                            <div id="creditItem">
+                                {% comment %}
+                                todo: <strong>{{ todo|length }}</strong>
+                                {% endcomment %}
+                                <!-- 과제 테이블 -->
+                                <table class="type10 col-md-12">
+                                    <thead>
+                                    <tr>
+                                        <th class="col-md-6" scope="cols" style="font-size: 15px">내용</th>
+                                        <th class="col-md-6" scope="cols" style="font-size: 15px">마감일</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% if todo %}
+                                    {% for boardRow in todo %}
+                                    <tr>
+                                        <td class="col-md-6">{{ boardRow.todo }}</td>
+                                        <td class="col-md-6">{{ boardRow.deadline }}</td>
+                                    </tr>
+                                    <tr height="1" bgcolor="#87C7D1">
+                                        <td class="col-md-12"></td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% else %}
+                                    <tr class="text-center">
+                                        <td>
+                                            <p>No Data.</p>
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="mr-5">커뮤니티 서비스</div>
                         </div>
-                        <a class="card-footer text-white clearfix small z-1" href="#">
-                            <span class="float-left">View Details</span> <span
-                                class="float-right"> <i class="fas fa-angle-right"></i>
-							</span>
-                        </a>
-                    </div>
+                    </form>
                 </div>
             </div>
-
 
             <!-- Footer -->
             <footer>
@@ -169,21 +223,20 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to
-                        Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">로그아웃을 하시겠습니까?</h5>
                     <button class="close" type="button" data-dismiss="modal"
                             aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are
-                    ready to end your current session.
+                <div class="modal-body">
+                    로그아웃을 하시려면 로그아웃 버튼을 눌러주세요!
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button"
-                            data-dismiss="modal">Cancel
+                            data-dismiss="modal">취소하기
                     </button>
-                    <a class="btn btn-primary" href="/login/">Logout</a>
+                    <a class="btn btn-primary" href="/login/">로그아웃하기</a>
                 </div>
             </div>
         </div>

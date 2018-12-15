@@ -301,5 +301,5 @@ class crwaling(threading.Thread):
 
 
 pr1 = crwaling()
-sqlsave()
+#sqlsave()
 pr1.start()

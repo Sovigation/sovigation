@@ -47,7 +47,6 @@ class Board(models.Model):
     subject = models.CharField(max_length=50, blank=True)
     name = models.CharField(max_length=50, blank=True)
     created_date = models.DateField(null=True, blank=True)
-    mail = models.CharField(max_length=50, blank=True)
     memo = models.CharField(max_length=200, blank=True)
     hits = models.IntegerField(null=True, blank=True)
 
@@ -62,6 +61,11 @@ class LoginResult(models.Model):
     result = models.BooleanField()
 
 
+class LoginUser(models.Model):
+    userid = models.CharField(max_length=50, blank=True)
+    name = models.CharField(max_length=50, blank=True)
+
+
 class Grade(models.Model):
     user = models.ForeignKey(UserInfo, on_delete=models.CASCADE)
     grade = models.CharField(max_length=2)
@@ -69,11 +73,6 @@ class Grade(models.Model):
     semester = models.CharField(max_length=6)
     major = models.BooleanField(null=False, default=False)
     subject = models.CharField(null=True, max_length=20)
-
-
-class LoginUser(models.Model):
-    userid = models.CharField(max_length=50, blank=True)
-    name = models.CharField(max_length=50, blank=True)
 
 
 class UserTodo(models.Model):
